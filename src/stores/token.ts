@@ -44,7 +44,7 @@ export const useTokenStore = defineStore('myToken', () => {
     };
 
     function isCol() {
-        return isCollapse.value = !isCollapse.value
+        return isCollapse.value = !isCollapse.value;
     };
 
     return { token, saveToken, tokenJson, isCol, isCollapse };
