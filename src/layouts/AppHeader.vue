@@ -4,7 +4,6 @@ import { getInfo, logout } from '@/api/user';
 import { useRouter } from "vue-router";
 const router = useRouter();
 const token = useMenuStoreHook();
-// import { Content } from '@/api/user';
 const userInfo = ref({ portrait: '', userName: '' });
 
 getInfo().then(res => {

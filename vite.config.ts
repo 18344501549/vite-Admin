@@ -15,6 +15,11 @@ export default defineConfig({
         target: 'http://39.97.218.60/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/front/, ''),
+      },
+      "/boss": {
+        target: 'http://39.97.218.60/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/boss/, ''),
       }
     }
   },

@@ -36,7 +36,7 @@ type LoginResult = {
 export const login = (loginFrom: LoginInfo) => {
     return request<LoginResult>({
         method: 'POST',
-        url: '/user/login',
+        url: '/front/user/login',
         data: `phone=${loginFrom.phone}&password=${loginFrom.password}`
     });
 };
@@ -46,7 +46,7 @@ export const login = (loginFrom: LoginInfo) => {
 export const getInfo = () => {
     return request<userInfo<Content>>({
         method: 'GET',
-        url: '/user/getInfo',
+        url: '/front/user/getInfo',
     });
 };
 
@@ -54,7 +54,7 @@ export const getInfo = () => {
 export const logout = () => {
     return request({
         method: 'POST',
-        url: '/user/logout',
+        url: '/front/user/logout',
     });
 };
 
@@ -70,9 +70,9 @@ export const refreshToken = () => {
     isRefreshing = true;
     promiseRT = request<LoginResult>({
         method: 'POST',
-        url: '/user/refresh_token',
+        url: '/front/user/refresh_token',
         params: {
-            refreshToken: store.token.refresh_token
+            refreshtoken: store.token.refresh_token
         }
     }).finally(() => {
         isRefreshing = false;

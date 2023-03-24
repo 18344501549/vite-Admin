@@ -38,6 +38,8 @@ request.interceptors.response.use((response) => {
 }, async (error) => {
     if (error.response.status === 401) {
         const { data } = await refreshToken();
+        console.log(data, '0');
+
         if (data.success) {
             // 保存新token
             store.saveToken(data.content);
