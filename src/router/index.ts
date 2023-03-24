@@ -22,6 +22,16 @@ const router = createRouter({
           component: RoleIndex
         },
         {
+          path: '/menu',
+          name: 'menu',
+          component: () => import('@/views/menu/MenuIndex.vue')
+        },
+        {
+          path: '/menu/create',
+          name: 'menu-create',
+          component: () => import('@/views/menu/CreateOrEdit.vue')
+        },
+        {
           path: '/:xxx(.*)*',
           name: 'errorPage',
           component: () => import('@/views/errorpage/ErrorPage.vue')

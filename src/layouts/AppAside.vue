@@ -27,7 +27,7 @@ const token = useTokenStore();
                         </el-icon>
                         <span>角色列表</span>
                     </el-menu-item>
-                    <el-menu-item index="">
+                    <el-menu-item index="/menu">
                         <el-icon>
                             <IEpSetting />
                         </el-icon>
