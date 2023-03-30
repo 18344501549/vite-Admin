@@ -16,7 +16,7 @@ export type MenuItem = {
     href: string;
     icon: string;
     id: number;
-    leval: number;
+    level: number;
     name: string;
     operatorId: number | null;
     orderNum: number;
@@ -36,7 +36,7 @@ export const getAll = () => {
 };
 
 
-type CreateOrEditMenu = Pick<MenuItem, 'id' | 'parentId' | 'name' | 'href' | 'icon' | 'orderNum' | 'description' | 'shown'> & { id?: number }
+export type CreateOrEditMenu = Pick<MenuItem, 'parentId' | 'name' | 'href' | 'icon' | 'orderNum' | 'description' | 'shown'> & { id?: number }
 // type CreateOrEditMenu = Omit<MenuItem, 'createdBy' | 'createdTime' | 'leval' | 'operatorId' | 'updatedBy' | 'updatedTime'>
 
 // 获取菜单所有项
